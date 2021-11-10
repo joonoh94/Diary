@@ -3,16 +3,14 @@
 
     <item android:state_enabled="true">
         <shape>
-            <solid
-                android:color="#999999"
-                android:backgroundTint="#999999"
-                >
-
-            </solid>
+            <solid android:color="@color/colorGray"/>
 
             <corners android:radius="20dp">
 
             </corners>
         </shape>
     </item>
+
+
+
 </selector>
