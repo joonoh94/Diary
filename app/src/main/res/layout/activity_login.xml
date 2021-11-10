@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="16dp"
@@ -58,7 +59,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Login"
+        android:text="Logilllln"
         android:textColor="#FFFFFF"
         android:background="@drawable/bin_blue"
         android:layout_marginBottom="16dp"
