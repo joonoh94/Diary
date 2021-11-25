@@ -9,6 +9,7 @@
     android:paddingTop="16dp">
 
     <TextView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -17,49 +18,43 @@
         android:layout_marginBottom="16dp"
         ></TextView>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@null"
-        android:src="@drawable/diary"
-        android:layout_gravity="center"
-        android:layout_marginBottom="16dp"
-        >
-
-    </ImageView>
-
-<com.google.android.material.textfield.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp">
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="#FFFFFF"
-        android:hint="Email">
-
-    </com.google.android.material.textfield.TextInputEditText>
-
-</com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp">
-        <com.google.android.material.textfield.TextInputEditText
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Email">
+
+        </EditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+      <EditText
+            android:id="@+id/psw"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:backgroundTint="#FFFFFF"
             android:hint="Password">
 
-        </com.google.android.material.textfield.TextInputEditText>
+      </EditText>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="fuck"
+        android:text="로그인"
         android:textColor="#FFFFFF"
         android:background="@drawable/bin_blue"
         android:layout_marginBottom="16dp"
@@ -103,7 +98,8 @@
             >
         </TextView>
 
-        <TextView
+        <Button
+            android:id="@+id/signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -111,7 +107,7 @@
             android:textSize="18sp"
             android:text="회원가입">
 
-        </TextView>
+        </Button>
 
     </LinearLayout>
 
