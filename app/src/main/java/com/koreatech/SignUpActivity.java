@@ -1,4 +1,4 @@
-package com.example;
+package com.koreatech;
 
 
 import android.os.Bundle;

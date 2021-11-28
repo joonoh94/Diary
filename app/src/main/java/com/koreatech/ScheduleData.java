@@ -1,12 +1,13 @@
-package com.example;
+package com.koreatech;
 
-public class DiaryData {
+
+public class ScheduleData  {
     private String content;
     private String title;
 
     private String day;
 
-    public DiaryData() {
+    public ScheduleData() {
 
     }
 
@@ -38,6 +39,3 @@ public class DiaryData {
 
 
 }
-
-
-
