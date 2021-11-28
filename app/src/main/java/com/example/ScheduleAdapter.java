@@ -1,5 +1,6 @@
-package com.example.diary;
+package com.example;
 
+import android.content.Context;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -10,12 +11,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.diary.R;
+
 import java.util.ArrayList;
 
-public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ViewHolder> {
+public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHolder> {
 
 
-    ArrayList<AccountData> items = new ArrayList<AccountData>();
+    ArrayList<ScheduleData> items = new ArrayList<ScheduleData>();
+    private Context mContext;
 
     @NonNull
     @Override
@@ -27,37 +31,42 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        AccountData item = items.get(position);
+        ScheduleData item = items.get(position);
         holder.setItem(item);
-
     }
+
+
 
     @Override
     public int getItemCount() {
+        if(items==null){
+            return 0;
+        }
         return items.size();
     }
 
-    public void addItem(AccountData item) {
+    public void addItem(ScheduleData item) {
         items.add(item);
     }
 
-    public void setItems(ArrayList<AccountData> items) {
+    public void setItems(ArrayList<ScheduleData> items) {
         this.items = items;
     }
 
-    public AccountData getItem(int position) {
+    public ScheduleData getItem(int position) {
         return items.get(position);
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements  View.OnCreateContextMenuListener{
+    class ViewHolder extends RecyclerView.ViewHolder implements  View.OnCreateContextMenuListener{
 
         TextView content;
         TextView title;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            content = itemView.findViewById(R.id.detailListContext);
             title = itemView.findViewById(R.id.detailListTitle);
+            content = itemView.findViewById(R.id.detailListContext);
             itemView.setOnCreateContextMenuListener(this);
         }
 
@@ -97,10 +106,18 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ViewHold
             }
         };
 
-        public void setItem(AccountData item) {
+
+        public void setItem(ScheduleData item) {
             content.setText(item.getContent());
             title.setText(item.getTitle());
 
         }
+
     }
+
+
+
+
+
 }
+

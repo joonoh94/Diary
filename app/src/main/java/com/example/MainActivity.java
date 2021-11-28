@@ -1,8 +1,10 @@
-package com.example.diary;
+package com.example;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.example.diary.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,16 +1,12 @@
-package com.example.diary;
+package com.example;
 
-
-import android.os.Parcel;
-import android.os.Parcelable;
-
-public class ScheduleData  {
+public class DiaryData {
     private String content;
     private String title;
 
     private String day;
 
-    public ScheduleData() {
+    public DiaryData() {
 
     }
 
@@ -42,3 +38,6 @@ public class ScheduleData  {
 
 
 }
+
+
+

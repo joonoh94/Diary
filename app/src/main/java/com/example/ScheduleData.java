@@ -1,17 +1,18 @@
-package com.example.diary;
+package com.example;
 
-public class AccountData {
+
+public class ScheduleData  {
     private String content;
-
-    public AccountData(String content, String title, String day) {
-        this.content = content;
-        this.title = title;
-        this.day = day;
-    }
-
     private String title;
 
     private String day;
+
+    public ScheduleData() {
+
+    }
+
+
+
 
     public String getTitle() {
         return title;
@@ -33,10 +34,7 @@ public class AccountData {
     public String getContent() {
         return content;
     }
-    public void setContent(String content) {
-
-        this.content = content;
-    }
+    public void setContent(String content) { this.content = content; }
 
 
 
